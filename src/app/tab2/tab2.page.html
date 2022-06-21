@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <div *ngFor="let item of listaItensCompra">
+    <ion-card *ngIf="item.qtdeCompra != 0" >
+      <ion-item>
+        <ion-label>{{ item.qtdeCompra }} - {{ item.nome }}</ion-label><ion-checkbox color="primary"></ion-checkbox>
+      </ion-item>
+    </ion-card>
+  </div>
+
+  <div *ngIf="listaItensCompra != 0">
+    <ion-button color="success" id="btn-compartilhar" expand="block" (click)="whatsApp()" style="padding-right: 10px; padding-left: 10px;">Compartilhar lista - WhatsApp</ion-button>
+  </div>
+</ion-content>

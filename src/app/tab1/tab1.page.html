@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div>
+    <form [formGroup]="formCadastro">
+      <ion-card class="novoProduto">     
+      <div *ngIf="edit_key == false, else edit">
+        <label id="nome-novo">Item</label>
+        <input type="text" id="input-item-novo" formControlName="nome">
+        <div>
+          <ion-icon name="add-circle-outline" id="btn-novo" (click)="salvarItem(this.item.nome)"></ion-icon>
+        </div>
+      </div>
+      <ng-template #edit>
+        <label id="nome-novo">Item</label>
+        <input type="text" id="input-item-novo" formControlName="nome" disabled="true">
+        <div>
+          <ion-icon name="checkmark-circle-outline" id="btn-novo" (click)="salvarItem(this.item.nome)"></ion-icon>
+        </div>
+      </ng-template>
+        <label id="ideal-novo">Qtde<br>Ideal:</label>
+        <input type="number" id="input-ideal-novo" formControlName="qtdeIdeal">
+        <label id="atual-novo">Qtde<br>Atual:</label>
+        <input type="number" id="input-atual-novo" formControlName="qtdeAtual">
+        
+      </ion-card>
+    </form>
+  </div>
+
+  <div  *ngFor="let item of listaItens">
+    <div *ngIf="!item.edit">
+    <ion-card class="produto">
+      
+      <label id="nome">{{ item.nome }}</label>
+      <label id="comprar">=</label>
+      <label id="quantidade">{{ item.qtdeCompra }}</label>
+      <label id="ideal">Qtde<br>Ideal:</label>
+      <label id="input-ideal">{{ item.qtdeIdeal }}</label>
+      <label id="atual">Qtde<br>Atual:</label>
+      <label id="input-atual">{{ item.qtdeAtual }}</label>
+
+      <div>
+        <ion-icon name="create-outline" id="btn-edit" (click)="editarItem(item)"></ion-icon>
+        <ion-icon name="trash-outline" id="btn-delete" (click)="excluirItem(item.nome)"></ion-icon>
+      </div>
+    </ion-card>
+    </div>
+  </div>
+
+  <div *ngIf="listaItens != 0">
+    <ion-button color="primary" id="btn-listar" expand="block" style="padding-right: 10px; padding-left: 10px;"
+      (click)="GerarLista()">Gerar lista de compras</ion-button>
+  </div>
+
+</ion-content>

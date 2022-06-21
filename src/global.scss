@@ -1,0 +1,190 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+ //:root{
+     //barra superior
+//     --ion-toolbar-background: #3880ff;
+//     --ion-toolbar-color: whitesmoke;
+
+//      //barra inferior
+//      --ion-tab-bar-background: #2196F3;
+//      --ion-tab-bar-color-selected: whitesmoke;
+//      --ion-tab-bar-color: rgb(0, 0, 0);  
+// }
+
+.produto{
+    height: 85px;
+    font-size: 18px;
+    color: black;
+}
+
+#nome{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-weight: bold;
+}
+
+#quantidade{
+    position: absolute;
+    right: 148px;
+    top: 10px;
+}
+
+#comprar{
+    position: absolute;
+    left: 155px;
+    top: 10px;
+}
+
+#ideal{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 12px;
+}
+
+#atual{
+    position: absolute;
+    right: 170px;
+    bottom: 10px;
+    font-size: 12px;
+}
+
+#input-ideal{
+    width: 35px;
+    border-radius: 8px;
+    position: absolute;
+    left: 40px;
+    bottom: 10px;
+    text-align: center;
+}
+
+#input-atual{
+    width: 35px;
+    border-radius: 8px;
+    position: absolute;
+    right: 137px;
+    bottom: 10px;
+    text-align: center;
+}
+
+ //Novo Produto
+
+.novoProduto{
+    height: 85px;
+    font-size: 18px;
+    color: black;
+}
+
+#nome-novo{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+#input-item-novo{
+    width: 180px;
+    border-radius: 8px;
+    position: absolute;
+    left: 60px;
+    top: 10px;
+    border-width: 1px;
+}
+
+#ideal-novo{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 12px;
+}
+
+#atual-novo{
+    position: absolute;
+    right: 150px;
+    bottom: 10px;
+    font-size: 12px;
+}
+
+#input-ideal-novo{
+    width: 35px;
+    border-radius: 8px;
+    position: absolute;
+    left: 60px;
+    bottom: 10px;
+    text-align: center;
+    border-width: 1px;
+}
+
+#input-atual-novo{
+    width: 35px;
+    border-radius: 8px;
+    position: absolute;
+    right: 102px;
+    bottom: 10px;
+    text-align: center;
+    border-width: 1px;
+}
+
+#btn-novo{
+    width: 40px;
+    height: 40px;
+    margin: 22px;
+    position: absolute;
+    right: 0px;
+    color: #3880ff;
+}
+
+#btn-delete{
+    --border-radius: 40px;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: absolute;
+    right: 5px;
+    color: rgb(104, 100, 100);
+}
+
+#btn-edit{
+    --border-radius: 40px;
+    width: 30px;
+    height: 30px;
+    margin-right: 55px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: absolute;
+    right: 5px;
+    color: rgb(104, 100, 100);
+}
+
+.card-toast{
+    --background: #3880ff;
+    --color: white;
+}
